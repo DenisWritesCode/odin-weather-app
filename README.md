@@ -1,2 +1,5 @@
 # odin-weather-app
-DIsplay weather data
+
+Display weather data
+
+- Need to fuzzy search cities.
