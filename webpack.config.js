@@ -28,6 +28,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
   ],
+  target: "web",
   devServer: {
     contentBase: "./dist",
     open: true,
