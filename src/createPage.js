@@ -23,7 +23,8 @@ const pageLayout = () => {
 };
 
 async function fillPage(data) {
-  const divForm = document.querySelector(".divForm");
+  const divData = document.querySelector(".divData");
+  divData.innerText = "";
 
   const icon = document.createElement("img");
   await fetchImage(data.icon).then((imgUrl) => {
@@ -40,11 +41,11 @@ async function fillPage(data) {
   cityDisplay.innerText = `CIty Name: ${data.cityName}`;
   skyDisplay.innerText = `Sky: ${data.sky}`;
 
-  divForm.appendChild(tempDisplay);
-  divForm.appendChild(humidityDisplay);
-  divForm.appendChild(cityDisplay);
-  divForm.appendChild(skyDisplay);
-  divForm.appendChild(icon);
+  divData.appendChild(tempDisplay);
+  divData.appendChild(humidityDisplay);
+  divData.appendChild(cityDisplay);
+  divData.appendChild(skyDisplay);
+  divData.appendChild(icon);
 }
 
 export default pageLayout;
