@@ -7,8 +7,12 @@ const createForm = () => {
   const cityInput = document.createElement("input");
   cityInput.setAttribute("type", "input");
   cityInput.setAttribute("name", "citySearch");
+  cityInput.id = "citySearch";
   cityInput.setAttribute("placeholder", "Weather for...");
   cityInput.setAttribute("required", "");
+
+  // DropDown for metric
+  //const metric ;
 
   // Submit button
   const btn = document.createElement("button");

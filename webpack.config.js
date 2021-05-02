@@ -29,6 +29,7 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
   target: "web",
+  devtool: "source-map",
   devServer: {
     contentBase: "./dist",
     open: true,
