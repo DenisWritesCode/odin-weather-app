@@ -12,7 +12,20 @@ const createForm = () => {
   cityInput.setAttribute("required", "");
 
   // DropDown for metric
-  //const metric ;
+  const units = document.createElement("select");
+  units.setAttribute("name", "units");
+  units.setAttribute("id", "units");
+  // kms, degrees
+  const metric = document.createElement("option");
+  metric.setAttribute("value", "metric");
+  metric.innerText = "Metric";
+  // miles, fahrenheit
+  const imperial = document.createElement("option");
+  imperial.setAttribute("value", "imperial");
+  imperial.innerText = "Imperial";
+
+  units.appendChild(metric);
+  units.appendChild(imperial);
 
   // Submit button
   const btn = document.createElement("button");
@@ -20,6 +33,7 @@ const createForm = () => {
   btn.innerText = "Fetch Weather";
 
   form.appendChild(cityInput);
+  form.appendChild(units);
   form.appendChild(btn);
 
   return form;
