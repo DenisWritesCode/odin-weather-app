@@ -22,7 +22,7 @@ const createForm = () => {
   form.appendChild(cityInput);
   form.appendChild(btn);
 
-  document.body.appendChild(form);
+  return form;
 };
 
 export default createForm;
