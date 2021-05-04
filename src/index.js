@@ -2,11 +2,13 @@ import fetchData from "./api";
 import cleanedData from "./handleJSON";
 import pageLayout, { fillPage } from "./createPage";
 
-function conductFetch(city, units = "metric") {
-  fetchData(city, units).then((rawData) => {
-    const data = cleanedData(rawData);
-    fillPage(data);
-  });
+async function conductFetch(city, units = "metric") {
+  // fetchData(city, units).then((rawData) => {
+  //   const data = cleanedData(rawData);
+  //   fillPage(data);
+  // });
+  const data = await fetchData(city, units); // dataJSON
+  console.log(data);
 }
 
 // Quick page initialisation
